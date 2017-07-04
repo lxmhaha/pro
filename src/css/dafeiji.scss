@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: none;}
+html, body{width: 100%; height: 100%; overflow: hidden;}
+ul, li {list-style: none;}
+
+
+@mixin sty($w,$h, $b,$p){
+   width: $w;
+   height: $h;
+   background:$b;
+   position: $p;
+}
+
+/*主菜单*/
+#main {
+    
+    @include sty($w: 480px,$h:100%, $b:(url(../images2/bg.jpg) repeat-y),$p:relative);
+	margin: 0 auto;
+	
+	#list {
+	    @include sty($w: 200px,$h:100%, $b:none,$p:absolute);
+        left: 140px; top: 150px;
+        
+        li {
+             @include sty($w: 198px,$h:80px, $b:#f45,$p:static);
+            border: 1px solid black;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 30px;
+            font-family: "微软雅黑";
+            text-align: center;
+            line-height: 80px;  
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+ 
+
+/*加载页面*/
+.logo {
+     @include sty($w: 428px,$h:104px, $b:(url(../images2/logo.png) no-repeat),$p:absolute);
+	left: 26px; top: 30%;
+}
+.load {
+    @include sty($w: 200px,$h:42px, $b:(url(../images2/loading1.png) no-repeat),$p:absolute);
+	left: 140px; top: 70%;
+}
+
+
+/*游戏主界面*/
+/*我的飞机*/
+.myplane {
+     @include sty($w: 98px,$h:122px, $b:(url(../images2/me.png) no-repeat),$p:absolute);
+}
+
+/*子弹*/
+.bullet {
+     @include sty($w: 7px,$h:18px, $b:(url(../images2/bullet.png) no-repeat),$p:absolute);
+}
+/*子弹爆炸*/
+.bullet-die {
+     @include sty($w: 40px,$h:43px, $b:(url(../images2/die1.png) no-repeat),$p:absolute);
+}
+
+/*大型飞机*/
+.enemy-large {
+      @include sty($w: 165px,$h:256px, $b:(url(../images2/plane3.png) no-repeat),$p:absolute);
+}
+/*中型飞机*/
+.enemy-middle {
+    @include sty($w: 70px,$h:92px, $b:(url(../images2/plane2.png) no-repeat),$p:absolute);
+
+}
+/*小型飞机*/
+.enemy-small {
+     @include sty($w: 59px,$h:36px, $b:(url(../images2/plane1.png) no-repeat),$p:absolute);
+}
+
+
+
+
+
+
+
